@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AMAUTA MED - Chatbot Clínico de Inteligencia Artificial para la medicina peruana.">
+  <title>AMAUTA MED — Chatbot Clínico</title>
+  
+  <!-- Estilos del Chatbot -->
+  <link rel="stylesheet" href="chatbot.css">
+  
+  <!-- Iconos de Google Material Symbols -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+  <!-- Barra Lateral (Sidebar) -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="assets/amauta-logo.png" alt="AMAUTA MED Logo">
+      <div class="sidebar-brand">
+        <h2>AMAUTA <span>MED</span></h2>
+        <span>Sabiduría Médica</span>
+      </div>
+    </div>
+    
+    <div class="sidebar-action">
+      <button class="btn-new-analysis" onclick="window.location.reload();">
+        <span class="material-symbols-outlined">add</span>
+        Nueva Consulta
+      </button>
+    </div>
+    
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <h3>Servicios</h3>
+        <ul>
+          <li class="active">
+            <a href="#">
+              <span class="material-symbols-outlined">chat</span>
+              Chatbot Clínico
+            </a>
+          </li>
+          <li>
+            <a href="suscripciones.html">
+              <span class="material-symbols-outlined">star</span>
+               Suscripción Premium
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <span class="material-symbols-outlined">home</span>
+              Página de Inicio
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="nav-section">
+        <h3>Historial Reciente</h3>
+        <ul>
+          <li>
+            <a href="#" onclick="alert('Funcionalidad de historial en desarrollo. Las consultas se guardan localmente en tu sesión.');">
+              <span class="material-symbols-outlined">history</span>
+              Paciente con HTA
+            </a>
+          </li>
+          <li>
+            <a href="#" onclick="alert('Funcionalidad de historial en desarrollo. Las consultas se guardan localmente en tu sesión.');">
+              <span class="material-symbols-outlined">history</span>
+              Caso Clínico ENAM #4
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="sidebar-footer">
+      <div class="user-profile">
+        <div class="user-avatar">
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <div class="user-info">
+          <span class="name">Dr. Sergio</span>
+          <span class="role">Médico General</span>
+        </div>
+        <a href="index.html" class="icon-btn" title="Cerrar Sesión">
+          <span class="material-symbols-outlined">logout</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Área Principal del Chat (Chat Main) -->
+  <main class="chat-main">
+    <header class="top-header">
+      <div class="header-tabs">
+        <button class="tab active">Consulta Clínica</button>
+        <button class="tab" onclick="alert('Sección de Guías MINSA en desarrollo. Pronto integrada directamente.');">Guías MINSA</button>
+        <button class="tab" onclick="alert('Simulador ENAM en desarrollo.');">Simulador ENAM</button>
+      </div>
+      <div class="header-actions">
+        <div class="status-indicator">
+          <span class="dot"></span>
+          En línea
+        </div>
+        <button class="icon-btn" title="Configuración" onclick="alert('Configuración en desarrollo.');">
+          <span class="material-symbols-outlined">settings</span>
+        </button>
+      </div>
+    </header>
+    
+    <!-- Contenedor del Chat -->
+    <div class="chat-container">
+      <!-- Mensaje Inicial de Bienvenida -->
+      <div class="message ai-message">
+        <div class="ai-avatar">
+          <img src="assets/amauta-logo.png" alt="AI">
+        </div>
+        <div class="message-content ai-content">
+          <div class="ai-header-title">AMAUTA MED</div>
+          <p>Hola, soy <strong>AMAUTA MED</strong>, tu asistente de Inteligencia Artificial diseñado específicamente para la praxis y el aprendizaje de la medicina en el Perú.</p>
+          <p>¿En qué te puedo ayudar hoy? Puedes consultarme sobre:</p>
+          <ul class="clinical-list">
+            <li>Análisis de casos clínicos y diagnósticos diferenciales.</li>
+            <li>Elaboración de reportes de evolución con formato SOAP.</li>
+            <li>Dosificación farmacológica y guías técnicas de salud (MINSA).</li>
+            <li>Preparación y simulación de preguntas tipo examen ENAM.</li>
+          </ul>
+          <p><em>Escribe tu pregunta en el cuadro de texto inferior para comenzar.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Área de Entrada de Texto -->
+    <div class="input-container">
+      <div class="input-box">
+        <textarea placeholder="Pregunta a AMAUTA MED sobre algún caso clínico, dosificación o guías MINSA..."></textarea>
+        <div class="input-actions">
+          <button class="btn-send" title="Enviar mensaje">
+            <span class="material-symbols-outlined">send</span>
+          </button>
+        </div>
+      </div>
+      <div class="disclaimer">
+        AMAUTA MED es una herramienta de asistencia con inteligencia artificial. Siempre debe contrastarse con la opinión de un profesional médico colegiado.
+      </div>
+    </div>
+  </main>
+
+  <!-- Lógica Interactiva del Chatbot -->
+  <script src="chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+# AMAUTA MED — KB SUPLEMENTARIO SALUD PÚBLICA v1.0
+# Complemento al KB v10.12.2 — cubre temas NO clínico-asistenciales
+# Fuentes: OMS, OPS, MINSA Perú, literatura de salud pública peruana
+# Última auditoría: Mayo 2026
+
+---
+
+## 📌 ÍNDICE
+
+§A. Hitos Históricos de Salud Pública Internacional
+  §A.1 Declaración de Alma-Ata 1978
+  §A.2 Carta de Ottawa 1986
+  §A.3 Objetivos del Milenio (ODM) 2000-2015
+  §A.4 Objetivos de Desarrollo Sostenible (ODS) 2015-2030
+  §A.5 Comisión Determinantes Sociales de la Salud (2008)
+  §A.6 Renovación APS — OPS 2005
+
+§B. Atención Primaria de Salud (APS)
+  §B.1 Definición de APS
+  §B.2 Componentes esenciales (Alma-Ata)
+  §B.3 APS Renovada (Perú)
+  §B.4 Niveles de atención en Perú
+
+§C. Promoción de la Salud
+  §C.1 Carta de Ottawa — 5 áreas de acción
+  §C.2 Determinantes sociales de la salud
+  §C.3 Modelos de promoción
+
+§D. Ética y Bioética Médica
+  §D.1 Principios bioéticos (Beauchamp & Childress)
+  §D.2 Consentimiento informado
+  §D.3 Confidencialidad y secreto médico
+  §D.4 Comités de ética hospitalaria
+  §D.5 Ética en investigación
+
+§E. Administración y Gestión Sanitaria
+  §E.1 Sistema de salud peruano (MINSA, EsSalud, FFAA, privado)
+  §E.2 Categorización de establecimientos de salud
+  §E.3 Aseguramiento Universal en Salud (AUS)
+
+§F. Epidemiología Conceptual
+  §F.1 Medidas de frecuencia (incidencia, prevalencia)
+  §F.2 Medidas de asociación (RR, OR)
+  §F.3 Tipos de estudios epidemiológicos
+  §F.4 Sesgos en investigación
+
+§G. Comunicación Médico-Paciente
+  §G.1 Comunicación de malas noticias (SPIKES)
+  §G.2 Entrevista médica
+  §G.3 Adherencia terapéutica
+
+§H. Historia de la Medicina (Hitos ENAM)
+  §H.1 Hipocrátes y origen de la medicina occidental
+  §H.2 Vacunación (Jenner, Pasteur)
+  §H.3 Descubrimientos clave del siglo XX
+
+---
+
+## §A. HITOS HISTÓRICOS DE SALUD PÚBLICA INTERNACIONAL
+
+## §A.1 DECLARACIÓN DE ALMA-ATA 1978
+
+**Evento:** Conferencia Internacional sobre Atención Primaria de Salud.
+**Fecha:** 6-12 de septiembre de 1978.
+**Lugar:** Alma-Ata (actual Almaty), República Socialista Soviética de Kazajistán (entonces URSS).
+**Organizadores:** OMS (Organización Mundial de la Salud) y UNICEF.
+**Asistentes:** 134 países y 67 organizaciones internacionales.
+
+**Lema histórico:** "Salud para Todos en el año 2000" (SPT/2000).
+
+**Contenido clave:**
+- Definió la Atención Primaria de Salud (APS) como la estrategia fundamental para alcanzar la meta global "Salud para Todos".
+- Reconoció a la salud como derecho humano fundamental.
+- Identificó la APS como el primer nivel de contacto del individuo, la familia y la comunidad con el sistema nacional de salud.
+- Estableció 8 componentes esenciales de la APS (ver §B.2).
+
+**Impacto:**
+- Marcó un cambio de paradigma global de medicina curativa especializada hacia un enfoque preventivo, comunitario e integral.
+- Influyó en la creación de sistemas de salud descentralizados en países en desarrollo.
+- Base de la APS Renovada de OPS/OMS (2005).
+
+**Trampa ENAM frecuente:**
+- Confundir Alma-Ata 1978 (APS) con Ottawa 1986 (Promoción de la Salud) — son hitos OMS distintos.
+- Confundir el año (1978, NO 1968, 1986, 1987).
+- Confundir el país (Kazajistán, NO Canadá ni Suiza).
+
+**PEPA:** Alma-Ata 1978 = APS = OMS+UNICEF = "Salud para Todos en el año 2000" = Kazajistán.
+
+## §A.2 CARTA DE OTTAWA 1986
+
+**Evento:** Primera Conferencia Internacional sobre la Promoción de la Salud.
+**Fecha:** 17-21 de noviembre de 1986.
+**Lugar:** Ottawa, Canadá.
+**Organizador:** OMS.
+
+**Lema:** "Hacia una nueva salud pública".
+
+**Definición de Promoción de la Salud (Ottawa):**
+"Proporcionar a los pueblos los medios necesarios para mejorar su salud y ejercer un mayor control sobre la misma".
+
+**5 áreas de acción de la Carta de Ottawa:**
+1. Construir políticas públicas saludables.
+2. Crear entornos que apoyen la salud.
+3. Fortalecer la acción comunitaria.
+4. Desarrollar habilidades personales.
+5. Reorientar los servicios de salud.
+
+**3 estrategias fundamentales:** abogar, capacitar, mediar.
+
+**Trampa ENAM:** No confundir con Alma-Ata. Ottawa es Promoción de la Salud (1986, Canadá), Alma-Ata es Atención Primaria (1978, Kazajistán).
+
+**PEPA:** Ottawa 1986 = Promoción de la Salud = Canadá = 5 áreas de acción.
+
+## §A.3 OBJETIVOS DEL MILENIO (ODM) 2000-2015
+
+**Origen:** Cumbre del Milenio de la ONU, Nueva York, 2000.
+**Vigencia:** 2000-2015.
+**Cantidad:** 8 objetivos, 21 metas, 60 indicadores.
+
+**Los 8 ODM (relevantes para salud):**
+1. Erradicar la pobreza extrema y el hambre.
+2. Lograr la enseñanza primaria universal.
+3. Promover la igualdad entre los sexos y empoderamiento de la mujer.
+4. **Reducir la mortalidad infantil.** (salud)
+5. **Mejorar la salud materna.** (salud)
+6. **Combatir el VIH/SIDA, el paludismo y otras enfermedades.** (salud)
+7. Garantizar la sostenibilidad del medio ambiente.
+8. Fomentar una alianza mundial para el desarrollo.
+
+## §A.4 OBJETIVOS DE DESARROLLO SOSTENIBLE (ODS) 2015-2030
+
+**Origen:** Agenda 2030 de la ONU, septiembre 2015.
+**Vigencia:** 2015-2030.
+**Cantidad:** 17 objetivos, 169 metas.
+
+**ODS de salud:**
+- **ODS 3:** Garantizar una vida sana y promover el bienestar de todos en todas las edades.
+- Metas relevantes: mortalidad materna <70/100k, fin a muertes evitables RN/niños <5a, fin epidemias SIDA/TB/malaria, cobertura universal de salud (CUS).
+
+## §A.5 COMISIÓN DETERMINANTES SOCIALES DE LA SALUD
+
+**Evento:** Comisión OMS sobre Determinantes Sociales de la Salud.
+**Año:** 2008 (informe final).
+**Presidente:** Sir Michael Marmot.
+
+**Tesis central:** "La injusticia social está matando a la gente a gran escala". Las inequidades en salud son causadas por las condiciones sociales en que las personas nacen, viven, trabajan y envejecen.
+
+**3 principios de acción:**
+1. Mejorar las condiciones de vida cotidiana.
+2. Luchar contra la distribución desigual del poder, el dinero y los recursos.
+3. Medir la magnitud del problema, analizar y evaluar los efectos.
+
+## §A.6 RENOVACIÓN DE LA APS — OPS 2005
+
+**Evento:** Posición de OPS/OMS sobre la Renovación de la APS en las Américas.
+**Año:** 2005 (documento de posición).
+**Lugar:** Washington (sede OPS).
+
+**Tesis:** La APS sigue siendo válida pero requiere actualización tras 25 años de Alma-Ata.
+
+**Nuevos componentes:** primer contacto, integralidad, longitudinalidad, coordinación.
+
+**Trampa ENAM:** La Renovación APS NO es 1987 ni 1986 — es 2005. Los distractores frecuentes mezclan estos años.
+
+---
+
+## §B. ATENCIÓN PRIMARIA DE SALUD (APS)
+
+## §B.1 DEFINICIÓN DE APS (Alma-Ata 1978)
+
+"Atención sanitaria esencial basada en métodos y tecnologías prácticos, científicamente fundados y socialmente aceptables, puesta al alcance de todos los individuos y familias de la comunidad mediante su plena participación y a un coste que la comunidad y el país puedan soportar, en todas y cada una de las etapas de su desarrollo con un espíritu de autorresponsabilidad y autodeterminación".
+
+## §B.2 COMPONENTES ESENCIALES DE LA APS (Alma-Ata)
+
+Los 8 componentes esenciales:
+1. Educación sobre principales problemas de salud y métodos de prevención.
+2. Promoción del suministro de alimentos y nutrición adecuada.
+3. Abastecimiento de agua potable y saneamiento básico.
+4. Asistencia materno-infantil, incluida la planificación familiar.
+5. Inmunización contra las principales enfermedades infecciosas.
+6. Prevención y lucha contra las enfermedades endémicas locales.
+7. Tratamiento apropiado de enfermedades y traumatismos comunes.
+8. Suministro de medicamentos esenciales.
+
+## §B.3 APS RENOVADA EN PERÚ
+
+**Marco normativo MINSA:** Modelo de Atención Integral de Salud (MAIS) basado en familia y comunidad (RM 464-2011-MINSA).
+
+**Énfasis:** atención integral, integrada, continua, con enfoque de derechos, género e interculturalidad.
+
+## §B.4 NIVELES DE ATENCIÓN EN PERÚ
+
+**Categorización MINSA (NTS N°021-MINSA/DGSP-V.03):**
+
+**Primer nivel (atención primaria):**
+- I-1: Puesto de salud (con técnico).
+- I-2: Puesto de salud (con médico).
+- I-3: Centro de salud sin internamiento.
+- I-4: Centro de salud con internamiento.
+
+**Segundo nivel (atención especializada básica):**
+- II-1: Hospital de atención general.
+- II-2: Hospital de atención especializada.
+- II-E: Hospital de especialidad.
+
+**Tercer nivel (atención especializada avanzada):**
+- III-1: Hospital de atención general.
+- III-2: Hospital de atención especializada (referencia regional).
+- III-E: Instituto especializado (referencia nacional).
+
+---
+
+## §C. PROMOCIÓN DE LA SALUD
+
+## §C.1 CARTA DE OTTAWA — 5 ÁREAS DE ACCIÓN
+
+1. **Establecer políticas públicas saludables:** legislar para entornos saludables (ej: prohibición de tabaco en espacios públicos).
+2. **Crear entornos favorables:** ambientes físicos y sociales que promuevan salud.
+3. **Reforzar la acción comunitaria:** empoderamiento de comunidades.
+4. **Desarrollar aptitudes personales:** educación para la salud, habilidades para la vida.
+5. **Reorientar los servicios sanitarios:** de curativos a preventivos.
+
+## §C.2 DETERMINANTES SOCIALES DE LA SALUD
+
+**Categorías (Comisión OMS 2008):**
+- Circunstancias estructurales: contexto socioeconómico y político, posición social.
+- Determinantes intermedios: condiciones materiales, factores psicosociales, conductas, sistema de salud.
+
+**Modelo Dahlgren y Whitehead (capas):**
+1. Edad, sexo, factores hereditarios.
+2. Factores de estilo de vida individual.
+3. Influencias sociales y comunitarias.
+4. Condiciones de vida y trabajo.
+5. Condiciones socioeconómicas, culturales y ambientales generales.
+
+---
+
+## §D. ÉTICA Y BIOÉTICA MÉDICA
+
+## §D.1 PRINCIPIOS BIOÉTICOS (Beauchamp & Childress)
+
+Los 4 principios bioéticos fundamentales:
+1. **Autonomía:** respeto a la capacidad del paciente de decidir.
+2. **Beneficencia:** obligación de hacer el bien al paciente.
+3. **No maleficencia:** "primum non nocere", no causar daño.
+4. **Justicia:** distribución equitativa de recursos sanitarios.
+
+## §D.2 CONSENTIMIENTO INFORMADO
+
+**Elementos esenciales:**
+- Capacidad del paciente para decidir.
+- Información adecuada (diagnóstico, tratamiento, riesgos, alternativas, pronóstico).
+- Voluntariedad (sin coerción).
+- Documentación (formato escrito).
+
+**Marco legal Perú:** Ley General de Salud (Ley 26842), Reglamento de la Ley General de Salud.
+
+## §D.3 CONFIDENCIALIDAD Y SECRETO MÉDICO
+
+**Principio:** la información médica del paciente es confidencial.
+
+**Excepciones legales (Perú):**
+- Enfermedades de notificación obligatoria (TB, VIH, dengue, etc.).
+- Lesiones por violencia (denuncia obligatoria).
+- Orden judicial.
+- Maltrato infantil (Ley 30364).
+
+---
+
+## §E. ADMINISTRACIÓN Y GESTIÓN SANITARIA
+
+## §E.1 SISTEMA DE SALUD PERUANO
+
+**Subsistemas:**
+- **MINSA:** atención a población no asegurada (SIS — Seguro Integral de Salud).
+- **EsSalud:** atención a trabajadores formales y dependientes (Seguro Social).
+- **Sanidad de las FFAA y PNP:** atención a militares y policías + familias.
+- **Sector privado:** clínicas y consultas particulares.
+
+**Marco normativo:**
+- Ley Marco de Aseguramiento Universal en Salud (Ley 29344).
+- Decreto Legislativo 1163 (régimen único de SIS).
+
+## §E.2 ASEGURAMIENTO UNIVERSAL EN SALUD (AUS)
+
+**Definición:** garantía progresiva del derecho a la atención de salud a través del aseguramiento.
+
+**Componentes:**
+- Plan Esencial de Aseguramiento en Salud (PEAS).
+- Régimen contributivo, semicontributivo y subsidiado.
+
+---
+
+## §F. EPIDEMIOLOGÍA CONCEPTUAL
+
+## §F.1 MEDIDAS DE FRECUENCIA
+
+**Incidencia:** casos nuevos en un período / población en riesgo.
+**Prevalencia:** casos totales (nuevos + antiguos) en un momento / población total.
+
+## §F.2 MEDIDAS DE ASOCIACIÓN
+
+- **Riesgo Relativo (RR):** estudios de cohorte. RR=1 sin asociación, >1 factor de riesgo, <1 factor protector.
+- **Odds Ratio (OR):** estudios caso-control. Interpretación similar al RR.
+- **Razón de Tasas de Incidencia (RTI):** comparación de tasas.
+
+## §F.3 TIPOS DE ESTUDIOS EPIDEMIOLÓGICOS
+
+**Descriptivos:** reporte de caso, serie de casos, estudios ecológicos, transversales.
+**Analíticos observacionales:** caso-control, cohorte.
+**Analíticos experimentales:** ensayo clínico aleatorizado (gold standard).
+**Síntesis:** revisión sistemática, metaanálisis.
+
+---
+
+## §G. COMUNICACIÓN MÉDICO-PACIENTE
+
+## §G.1 PROTOCOLO SPIKES (Comunicación de Malas Noticias)
+
+**6 pasos:**
+1. **S** — Setting (entorno apropiado, privacidad).
+2. **P** — Perception (qué sabe el paciente).
+3. **I** — Invitation (qué quiere saber).
+4. **K** — Knowledge (información gradual, lenguaje claro).
+5. **E** — Emotions (responder a emociones con empatía).
+6. **S** — Strategy/Summary (plan y resumen).
+
+---
+
+## §H. HISTORIA DE LA MEDICINA (HITOS ENAM)
+
+## §H.1 HITOS FUNDACIONALES
+
+**Hipócrates (460-370 a.C.):** padre de la medicina occidental. Juramento hipocrático.
+**Galeno (130-200 d.C.):** teoría de los 4 humores (vigente 1500 años).
+**Vesalio (1543):** "De humani corporis fabrica" — base de la anatomía moderna.
+**Harvey (1628):** circulación sanguínea.
+**Pasteur (1822-1895):** teoría germinal, vacuna antirrábica, pasteurización.
+**Koch (1843-1910):** postulados de Koch, bacilo de TB, cólera.
+**Jenner (1796):** primera vacuna (viruela vacuna).
+**Fleming (1928):** descubrimiento penicilina.
+**Salk/Sabin (1950s):** vacunas polio.
+
+---
+
+FIN — KB SUPLEMENTARIO SALUD PÚBLICA v1.0
+Complementa AMAUTA_KB v10.12.2 con temas no clínico-asistenciales.
+Subir como SEGUNDO archivo en Knowledge Files del Gem AMAUTA MED.

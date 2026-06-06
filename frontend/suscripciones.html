@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMAUTA MED - Suscripciones</title>
+  <link rel="stylesheet" href="chatbot.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  
+  <style>
+    .subs-container {
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow-y: auto;
+      height: 100%;
+    }
+    
+    .subs-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .subs-header h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .subs-header p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .pricing-card {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px 32px;
+      position: relative;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary-blue);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pricing-card.popular {
+      border-color: var(--primary-blue);
+      background: #f8fafc;
+      transform: scale(1.05);
+      box-shadow: var(--shadow-md);
+    }
+
+    .pricing-card.popular:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary-blue);
+      color: #fff;
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .pricing-header {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .pricing-header h3 {
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .pricing-header .price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .pricing-header .price span {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .pricing-header p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin: 0 0 32px 0;
+      padding: 0;
+      flex-grow: 1;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 0.875rem;
+      color: var(--text-primary);
+    }
+
+    .pricing-features .check {
+      color: var(--primary-blue);
+      font-weight: bold;
+    }
+
+    .pricing-btn {
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      border-radius: var(--radius-xl);
+      font-weight: 600;
+      transition: all 0.3s;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .pricing-card:not(.popular) .pricing-btn {
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      background: #fff;
+    }
+
+    .pricing-card:not(.popular) .pricing-btn:hover {
+      border-color: var(--primary-blue);
+      color: var(--primary-blue);
+    }
+
+    .pricing-card.popular .pricing-btn {
+      background: var(--primary-blue);
+      color: #fff;
+      border: none;
+    }
+
+    .pricing-card.popular .pricing-btn:hover {
+      background: var(--primary-blue-hover);
+    }
+
+    .success-modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      z-index: 1000;
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .success-modal h3 {
+      color: var(--green-status);
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+    }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+      backdrop-filter: blur(4px);
+    }
+
+    @media (max-width: 1024px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .pricing-card.popular {
+        transform: scale(1);
+      }
+      .pricing-card.popular:hover {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="assets/amauta-logo.png" alt="AMAUTA MED Logo">
+      <div class="sidebar-brand">
+        <h2>AMAUTA MED</h2>
+        <span>Clinical AI Workspace</span>
+      </div>
+    </div>
+
+    <div class="sidebar-action">
+      <button class="btn-new-analysis" onclick="window.location.href='chatbot.html'">
+        <span class="material-symbols-outlined">chat</span>
+        Volver al Chatbot
+      </button>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section">
+        <h3>WORKSPACE</h3>
+        <ul>
+          <li>
+            <a href="chatbot.html">
+              <span class="material-symbols-outlined">history</span>
+              History
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="material-symbols-outlined">bookmark</span>
+              Favorites
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-section">
+        <h3>SYSTEM</h3>
+        <ul>
+          <li class="active">
+            <a href="suscripciones.html">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              Suscripción
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="material-symbols-outlined">settings</span>
+              Settings
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-profile">
+        <div class="user-avatar">
+          <span class="material-symbols-outlined">person</span>
+        </div>
+        <div class="user-info">
+          <span class="name">Dr. Ricardo Palma</span>
+          <span class="role" id="current-plan-text">Free Plan</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="chat-main" style="background: var(--bg-app);">
+    
+    <div class="subs-container">
+      <div class="subs-header">
+        <h1>Mejora tu Inteligencia Clínica</h1>
+        <p>Elige el plan que se adapte a tu nivel y transforma tu práctica médica con AMAUTA MED.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Estudiante</h3>
+            <div class="price">S/ 29<span>/mes</span></div>
+            <p>Ideal para preparación de ENAM y prácticas pre-profesionales.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Consultas limitadas al mes</li>
+            <li><span class="check">✓</span> Simulacros ENAM básicos</li>
+            <li><span class="check">✓</span> Acceso a guías MINSA</li>
+          </ul>
+          <button class="pricing-btn" onclick="simularCompra('Estudiante')">Elegir Plan</button>
+        </div>
+
+        <div class="pricing-card popular">
+          <div class="popular-badge">Más Popular</div>
+          <div class="pricing-header">
+            <h3>Profesional</h3>
+            <div class="price">S/ 69<span>/mes</span></div>
+            <p>Para médicos generales y residentes en su práctica clínica diaria.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Consultas ilimitadas</li>
+            <li><span class="check">✓</span> Generación de reportes SOAP</li>
+            <li><span class="check">✓</span> Análisis de laboratorios</li>
+            <li><span class="check">✓</span> Soporte prioritario</li>
+          </ul>
+          <button class="pricing-btn" onclick="simularCompra('Profesional')">Adquirir Plan Pro</button>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Institucional</h3>
+            <div class="price">A Medida</div>
+            <p>Para clínicas y hospitales con múltiples usuarios e integración.</p>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> Múltiples cuentas médicas</li>
+            <li><span class="check">✓</span> Panel de administración</li>
+            <li><span class="check">✓</span> Integración API (Pronto)</li>
+            <li><span class="check">✓</span> Capacitación dedicada</li>
+          </ul>
+          <button class="pricing-btn" onclick="alert('Dirigiendo al formulario de contacto...')">Contactar Ventas</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="overlay"></div>
+    <div class="success-modal" id="modal">
+      <span class="material-symbols-outlined" style="font-size: 48px; color: var(--green-status);">check_circle</span>
+      <h3 id="modal-title">¡Suscripción Exitosa!</h3>
+      <p id="modal-desc">Has adquirido el plan correctamente. Redirigiendo a tu espacio de trabajo...</p>
+    </div>
+
+  </main>
+
+  <script>
+    function simularCompra(planNombre) {
+      document.getElementById('overlay').style.display = 'block';
+      const modal = document.getElementById('modal');
+      modal.style.display = 'block';
+      
+      document.getElementById('modal-title').innerText = `¡Plan ${planNombre} Activado!`;
+      
+      document.getElementById('current-plan-text').innerText = `Plan ${planNombre}`;
+      document.getElementById('current-plan-text').style.color = 'var(--primary-blue)';
+      document.getElementById('current-plan-text').style.fontWeight = '700';
+
+      setTimeout(() => {
+        window.location.href = 'chatbot.html';
+      }, 2500);
+    }
+  </script>
+</body>
+</html>

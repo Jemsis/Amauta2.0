@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="AMAUTA MED - Sabiduría y Excelencia Médica. Plataforma de Inteligencia Artificial diseñada para potenciar tu praxis médica en Perú.">
+  <meta name="keywords" content="medicina, IA, inteligencia artificial, ENAM, MINSA, salud, Perú, chatbot médico">
+  <meta name="author" content="AMAUTA MED">
+
+  <title>AMAUTA MED — Sabiduría y Excelencia Médica</title>
+
+  <!-- Estilos Principales -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       1. BARRA DE NAVEGACIÓN (NAVBAR)
+       ========================================================================= -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+
+      <!-- Marca / Logo -->
+      <a href="#" class="navbar-brand" id="nav-brand">
+        <img src="assets/amauta-logo.png" alt="AMAUTA MED Logo">
+        <span>AMAUTA <span class="brand-gold">MED</span></span>
+      </a>
+
+      <!-- Enlaces de Navegación -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio" id="nav-inicio">Inicio</a></li>
+        <li><a href="#servicios" id="nav-servicios">Servicios</a></li>
+        <li><a href="#nosotros" id="nav-nosotros">Nosotros & Historia</a></li>
+        <li><a href="#colegas" id="nav-colegas">Colegas</a></li>
+      </ul>
+
+      <!-- Acciones (Botones Auth) -->
+      <div class="nav-actions" id="nav-actions">
+        <a href="acceso.html" class="btn-text" id="btn-nav-login">Inicio de sesión</a>
+        <a href="registro.html" class="btn-outline" id="btn-nav-register">Crear cuenta</a>
+      </div>
+
+      <!-- Hamburguesa Menú Móvil -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       2. SECCIÓN HERO (INICIO)
+       ========================================================================= -->
+  <section class="hero" id="inicio">
+    <div class="container">
+
+      <!-- Contenido Principal Hero -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          TECNOLOGÍA MÉDICA
+        </div>
+
+        <h1 class="hero-title">
+          Sabiduría y<br>
+          <span class="italic-accent">Excelencia Médica</span>
+        </h1>
+
+        <p class="hero-description">
+          El primer asistente de Inteligencia Artificial diseñado específicamente para estudiantes
+          y profesionales de la medicina peruana. Toma decisiones clínicas con confianza y precisión.
+        </p>
+
+        <!-- Botones de Acción -->
+        <div class="hero-buttons">
+          <a href="chatbot.html" class="btn-primary" id="btn-hero-chatbot">
+            Ir al Chatbot
+            <span class="btn-icon">→</span>
+          </a>
+          <a href="#tutorial" class="btn-secondary" id="btn-hero-tutorial">
+            Ver Tutorial
+            <span class="btn-icon">▶</span>
+          </a>
+        </div>
+
+        <!-- Estadísticas Rápidas -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="stat-icon">👥</div>
+            <div class="stat-info">
+              <div class="stat-number">6,000+</div>
+              <div class="stat-label">Estudiantes en línea</div>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-icon">📋</div>
+            <div class="stat-info">
+              <div class="stat-number">15,000+</div>
+              <div class="stat-label">Consultas realizadas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Representación Visual Hero -->
+      <div class="hero-visual">
+        <div class="hero-logo-wrapper">
+          <div class="hero-logo-ring"></div>
+          <img src="assets/amauta-logo.png" alt="AMAUTA MED Sello" class="hero-logo-img">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Indicador de Scroll -->
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse"></div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. SECCIÓN SERVICIOS / CARACTERÍSTICAS (FEATURES)
+       ========================================================================= -->
+  <section class="features" id="servicios">
+    <div class="container">
+
+      <!-- Cabecera de la Sección -->
+      <div class="section-badge">
+        <span class="dot"></span>
+        Nuestros Servicios
+      </div>
+
+      <h2 class="section-title animate-on-scroll">
+        Potenciamos tu <span class="highlight">Praxis Médica</span>
+      </h2>
+
+      <p class="section-subtitle animate-on-scroll">
+        Las mejores herramientas diseñadas para la realidad del sistema de salud peruano.
+      </p>
+
+      <!-- Cuadrícula de Tarjetas -->
+      <div class="features-grid">
+
+        <!-- Tarjeta 1: Inteligencia Clínica -->
+        <div class="feature-card animate-on-scroll" id="feature-inteligencia">
+          <div class="feature-icon">🧠</div>
+          <h3>Inteligencia Clínica</h3>
+          <p>
+            Genera reportes médicos SOAP, análisis de laboratorio, diagnósticos
+            diferenciales y recomendaciones basadas en evidencia.
+          </p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Análisis SOAP completos</li>
+            <li><span class="check">✓</span> Diagnósticos diferenciales</li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta 2: Cumplimiento MINSA -->
+        <div class="feature-card animate-on-scroll" id="feature-minsa">
+          <div class="feature-icon">📋</div>
+          <h3>Cumplimiento MINSA</h3>
+          <p>
+            Alineado con las Normas Técnicas de Salud y las guías de práctica clínica del Perú.
+          </p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Guías de Práctica Clínica del Perú</li>
+            <li><span class="check">✓</span> Protocolos de Referencia MINSA</li>
+          </ul>
+        </div>
+
+        <!-- Tarjeta 3: Éxito ENAM -->
+        <div class="feature-card animate-on-scroll" id="feature-enam">
+          <div class="feature-icon">🎓</div>
+          <h3>Éxito ENAM</h3>
+          <p>
+            Herramientas diseñadas para ayudar a estudiantes de medicina a prepararse
+            para el examen nacional.
+          </p>
+          <ul class="feature-list">
+            <li><span class="check">✓</span> Simulación de Examen</li>
+            <li><span class="check">✓</span> Preguntas Personalizadas</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. SECCIÓN HISTORIA Y FILOSOFÍA (NOSOTROS)
+       ========================================================================= -->
+  <section class="history" id="nosotros">
+    <div class="container">
+
+      <!-- Contenido Histórico e Interactividad -->
+      <div class="history-content animate-on-scroll">
+
+        <!-- Pestañas de Navegación del Historial -->
+        <div class="history-tabs">
+          <button class="history-tab active" data-tab="historia" id="tab-historia">Historia</button>
+          <button class="history-tab" data-tab="mision" id="tab-mision">Misión</button>
+          <button class="history-tab" data-tab="vision" id="tab-vision">Visión</button>
+        </div>
+
+        <!-- Bloque de Texto Dinámico -->
+        <div class="history-text" id="history-panel">
+          <h2>
+            La Historia de<br>
+            <span class="highlight">AMAUTA MED</span>
+          </h2>
+
+          <!-- Pestaña Historia -->
+          <div id="tab-content-historia" class="tab-content active">
+            <p>
+              En el antiguo Perú, el <strong>Amauta</strong> era el maestro, el sabio que custodiaba
+              el conocimiento, el motor que guiaba pueblos y naciones.
+            </p>
+            <p>
+              AMAUTA MED nace con la misión de ser un puente entre esta tradición de sabiduría
+              y la nueva era clínica del siglo XXI. No solo es un chatbot, es un aliado digital
+              que combina IA avanzada para fortalecer la praxis médica.
+            </p>
+            <div class="history-quote">
+              <p>
+                "Nuestro compromiso es democratizar el acceso a la excelencia clínica en
+                cada rincón del Perú."
+              </p>
+            </div>
+          </div>
+
+          <!-- Pestaña Misión -->
+          <div id="tab-content-mision" class="tab-content" style="display:none;">
+            <p>
+              Nuestra misión es empoderar a los profesionales y estudiantes de medicina del Perú
+              con herramientas de inteligencia artificial que eleven la calidad de la atención
+              médica y faciliten el aprendizaje continuo.
+            </p>
+            <p>
+              Buscamos cerrar la brecha tecnológica en el sector salud peruano, brindando
+              soluciones accesibles, confiables y alineadas con las normativas nacionales.
+            </p>
+          </div>
+
+          <!-- Pestaña Visión -->
+          <div id="tab-content-vision" class="tab-content" style="display:none;">
+            <p>
+              Ser la plataforma líder en Latinoamérica de inteligencia artificial aplicada
+              a la educación y práctica médica, reconocida por su impacto positivo en la
+              salud pública.
+            </p>
+            <p>
+              Aspiramos a un futuro donde cada médico y estudiante de medicina tenga acceso
+              a las mejores herramientas tecnológicas para tomar decisiones clínicas informadas.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Elemento Visual del Historial -->
+      <div class="history-visual animate-on-scroll">
+        <div class="history-image-container">
+          <img src="assets/amauta-logo.png" alt="AMAUTA MED Historia">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. SECCIÓN TESTIMONIOS (COLEGAS)
+       ========================================================================= -->
+  <section class="testimonials" id="colegas">
+    <div class="container">
+
+      <!-- Cabecera de Testimonios -->
+      <div class="section-badge">
+        <span class="dot"></span>
+        Testimonios
+      </div>
+
+      <h2 class="section-title animate-on-scroll">
+        Recomendaciones de <span class="highlight">Colegas</span>
+      </h2>
+
+      <p class="section-subtitle animate-on-scroll">
+        Lo que opinan médicos que confían en nuestra plataforma y la están transformando en su práctica diaria.
+      </p>
+
+      <!-- Cuadrícula de Testimonios -->
+      <div class="testimonials-grid">
+
+        <!-- Testimonio 1 -->
+        <div class="testimonial-card animate-on-scroll" id="testimonial-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            Me ayudó en mis consultas médicas de manera rápida. La integración con las guías MINSA
+            es algo que no encontré en ninguna otra plataforma. AMAUTA MED es imprescindible.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CV</div>
+            <div class="author-info">
+              <div class="author-name">Dra. Claudia V.</div>
+              <div class="author-role">Medicina Interna</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="testimonial-card animate-on-scroll" id="testimonial-2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            Para preparar el ENAM, AMAUTA MED fue mi aliado. Las preguntas personalizadas
+            y los análisis de casos clínicos me dieron la confianza que necesitaba.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RM</div>
+            <div class="author-info">
+              <div class="author-name">Dr. Ricardo M.</div>
+              <div class="author-role">Residente de Cirugía</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="testimonial-card animate-on-scroll" id="testimonial-3">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            La inteligencia artificial de AMAUTA MED simplificó mi flujo de trabajo clínico.
+            Ahora genero reportes SOAP en segundos.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JD</div>
+            <div class="author-info">
+              <div class="author-name">Dr. Julio D.</div>
+              <div class="author-role">Médico General</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- =========================================================================
+       6. SECCIÓN CALL TO ACTION (CTA)
+       ========================================================================= -->
+  <section class="cta-section" id="chatbot">
+    <div class="container">
+
+      <!-- Tarjeta CTA con Foco Clínico -->
+      <div class="cta-card animate-on-scroll">
+        <h2>¿Listo para elevar tu<br><span class="highlight">excelencia clínica</span>?</h2>
+        <p>
+          Únete a la vanguardia de la medicina en Perú. Simplifica tu praxis
+          con inteligencia artificial de primer nivel.
+        </p>
+        <a href="chatbot.html" class="cta-button" id="btn-cta">
+          Iniciar Consulta Gratuita
+          <span>→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. PIE DE PÁGINA (FOOTER)
+       ========================================================================= -->
+  <footer class="footer" id="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Identidad y Redes Sociales -->
+        <div class="footer-brand">
+          <a href="#" class="navbar-brand">
+            <img src="assets/amauta-logo.png" alt="AMAUTA MED" style="width:32px;height:32px;border-radius:50%;">
+            <span>AMAUTA <span class="brand-gold">MED</span></span>
+          </a>
+          <p>
+            Tecnología de inteligencia artificial al servicio de la medicina peruana.
+            Sabiduría y excelencia médica.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link social-facebook" id="social-fb" aria-label="Facebook" target="_blank"
+              rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link social-instagram" id="social-ig" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link social-whatsapp" id="social-wa" aria-label="WhatsApp" target="_blank"
+              rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Recursos -->
+        <div class="footer-column">
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="#" id="footer-blog-minsa">Blogs MINSA</a></li>
+            <li><a href="#" id="footer-preguntas">Preguntas Frecuentes</a></li>
+            <li><a href="#" id="footer-guias">Guías ENAM</a></li>
+            <li><a href="#" id="footer-blog-moderno">Blog Moderno</a></li>
+          </ul>
+        </div>
+
+        <!-- Soporte -->
+        <div class="footer-column">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="#" id="footer-terminos">Términos de Uso</a></li>
+            <li><a href="#" id="footer-privacidad">Política de Privacidad</a></li>
+            <li><a href="#" id="footer-contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Suscríbete para recibir actualizaciones sobre medicina y tecnología.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Email" id="newsletter-email" required>
+            <button type="submit" id="newsletter-submit">➤</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Copyright y Enlaces Legales -->
+      <div class="footer-bottom">
+        <p>© 2026 AMAUTA MED. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links">
+          <a href="#" id="footer-legal-terminos">Términos</a>
+          <a href="#" id="footer-legal-privacidad">Privacidad</a>
+          <a href="#" id="footer-legal-cookies">Cookies</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
