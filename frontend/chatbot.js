@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       // 2. Hacer la petición al backend local de FastAPI
-      const response = await fetch('http://localhost:8000/chat', {
+      const response = await fetch('/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -189,11 +189,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="material-symbols-outlined" style="color:white; font-size: 20px;">error</span>
           </div>
           <div class="message-content ai-content" style="border-color: #fca5a5;">
-            <p style="color: #b91c1c;"><strong>Error de conexión con el backend:</strong> No se pudo contactar al servidor clínico en <code>http://localhost:8000</code>.</p>
+              <p style="color: #b91c1c;"><strong>Error de conexión con el backend:</strong> No se pudo contactar al servidor clínico en <code>/chat</code>.</p>
             <p style="color: var(--text-secondary); margin-top: 8px; font-size: 0.85rem;">
               Asegúrate de:
-              <br>1. Haber configurado tu API Key de Groq en <code>landing/amauta-med-backend/.env</code>.
-              <br>2. Iniciar el servidor ejecutando <code>python run.py</code> en la carpeta <code>landing/amauta-med-backend</code>.
+              <br>1. Haber configurado tu API Key de Groq en <code>backend/.env</code>.
+              <br>2. Iniciar el servidor ejecutando <code>python run.py</code> en la carpeta <code>backend</code>.
             </p>
           </div>
         </div>
