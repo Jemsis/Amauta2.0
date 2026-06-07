@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planes - AMAUTA MED</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand"><img src="assets/amauta-logo.png" alt="logo">AMAUTA MED</a>
+      <div class="nav-actions">
+        <a href="acceso.html" class="btn-text">Iniciar sesión</a>
+        <a href="registro.html" class="btn-outline">Crear cuenta</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="padding:40px 20px;">
+    <div id="plan-root">
+      <!-- contenido renderizado por JS -->
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      const plan = params.get('plan') || 'estudiante';
+      const root = document.getElementById('plan-root');
+
+      const plans = {
+        estudiante: {
+          title: 'Plan Estudiante',
+          price: 'S/ 19.99 / mes',
+          features: [
+            'Acceso a simuladores ENAM',
+            'Banco de preguntas personalizado',
+            'Reportes de estudio y progreso'
+          ],
+          ctaText: 'Registrarme como Estudiante',
+          rol: 'estudiante'
+        },
+        medico: {
+          title: 'Plan Médico',
+          price: 'S/ 99.99 / mes',
+          features: [
+            'Generación de reportes clínicos avanzados',
+            'Soporte en decisión clínica',
+            'Acceso a herramientas profesionales'
+          ],
+          ctaText: 'Registrarme como Médico',
+          rol: 'medico'
+        }
+      };
+
+      const p = plans[plan] || plans.estudiante;
+
+      root.innerHTML = `
+        <section class="plan-detail">
+          <h1>${p.title}</h1>
+          <p class="plan-price">${p.price}</p>
+          <ul class="plan-features">
+            ${p.features.map(f => `<li>✓ ${f}</li>`).join('')}
+          </ul>
+          <div style="margin-top:20px;">
+            <a href="registro.html?rol=${p.rol}" class="btn-primary">${p.ctaText}</a>
+            <a href="index.html" class="btn-secondary" style="margin-left:12px;">Volver</a>
+          </div>
+        </section>
+      `;
+    })();
+  </script>
+</body>
+</html>
