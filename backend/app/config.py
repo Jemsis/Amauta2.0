@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     
     # API Keys
     groq_api_key: str = Field(default="", description="API Key de Groq")
-    groq_model: str = Field(default="llama-3.3-70b-versatile")
+    groq_model: str = Field(default="mixtral-8x7b-32768", validation_alias="GROQ_MODEL")
     
     # Google (opcional)
     google_api_key: Optional[str] = Field(default=None)
