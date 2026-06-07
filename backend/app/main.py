@@ -4,11 +4,17 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from uuid import uuid4
-from typing import List
+from typing import List, Optional
+
+from pydantic import BaseModel
 
 from .config import settings
 from .models.schemas import ChatRequest, ChatResponse, ChatHistoryItem, SessionResponse
 from .services.gemini_service import generate_chat_response
+
+from .db import SessionLocal, init_db
+from .models.orm import UserProfile
+
 
 app = FastAPI(title="AMAUTA MED Backend", version="1.0.0")
 
@@ -39,6 +45,45 @@ def _get_session(session_id: str) -> dict:
 def _append_history(session_id: str, role: str, content: str) -> None:
     session = _get_session(session_id)
     session["history"].append({"role": role, "content": content})
+
+
+
+class RegisterRequest(BaseModel):
+    nombre: str
+    apellidos: str
+    email: str
+    perfil: str
+    cmp: Optional[str] = None
+    password: str
+
+
+@app.on_event('startup')
+def on_startup():
+    # Initialize DB tables (dev convenience)
+    try:
+        init_db()
+    except Exception:
+        pass
+
+
+@app.post('/register')
+def register(req: RegisterRequest):
+    # Minimal registration that stores non-personal profile data
+    if req.perfil not in ('estudiante', 'medico'):
+        raise HTTPException(status_code=400, detail='Perfil no válido')
+
+    db = SessionLocal()
+    try:
+        profile = UserProfile(role=req.perfil)
+        db.add(profile)
+        db.commit()
+        db.refresh(profile)
+
+        # create session tied to profile id (not personal data)
+        session_id = _create_session(str(profile.id))
+        return {"ok": True, "session_id": session_id, "role": profile.role}
+    finally:
+        db.close()
 
 @app.get("/health")
 async def health() -> dict[str, str]:
