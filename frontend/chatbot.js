@@ -10,6 +10,9 @@ const USE_BACKEND = true;
 // Variable para almacenar el ID de la sesión actual
 let currentSessionId = sessionStorage.getItem('amauta_session_id') || null;
 
+// ✅ IMPORTANTE: Detectar automáticamente la URL del backend
+const BACKEND_URL = window.location.origin;  // Esto dará https://amauta2-0-2.onrender.com
+
 document.addEventListener('DOMContentLoaded', () => {
   const chatContainer = document.querySelector('.chat-container');
   const chatInput = document.querySelector('textarea');
@@ -76,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const typingIndicator = document.getElementById(typingID);
       if (typingIndicator) typingIndicator.remove();
 
-      // Simulated aligned KB response
       const aiResponseHTML = `
         <div class="message ai-message" style="animation: fadeIn 0.3s ease;">
           <div class="ai-avatar">
@@ -109,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // CONEXIÓN SEGURA CON EL BACKEND LOCAL (FastAPI + Groq + RAG)
   // ==========================================================================
   async function callRealAIResponse(userText) {
-    // 1. Mostrar indicador de "Escribiendo..."
     const typingID = 'typing-' + Date.now();
     const typingHTML = `
       <div class="message ai-message" id="${typingID}" style="animation: fadeIn 0.3s ease;">
@@ -125,8 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollToBottom();
 
     try {
-      // 2. Hacer la petición al backend local de FastAPI
-      const response = await fetch('/chat', {
+      // ✅ Usar la URL completa del backend
+      const apiUrl = `${BACKEND_URL}/chat`;
+      console.log("Llamando a:", apiUrl);  // Para depuración
+      
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -138,29 +142,30 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       });
 
-      if (!response.ok) throw new Error("Error en la respuesta del servidor backend");
+      console.log("Respuesta del servidor:", response.status);  // Para depuración
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Error ${response.status}: ${errorText}`);
+      }
 
       const data = await response.json();
 
-      // Guardar el session_id para mantener el hilo de la conversación (historial)
       if (data.session_id) {
         currentSessionId = data.session_id;
         sessionStorage.setItem('amauta_session_id', data.session_id);
       }
 
-      let aiText = data.reply;
+      let aiText = data.reply || data.message || "Lo siento, no pude procesar tu solicitud.";
 
-      // Reemplazo básico de Markdown a HTML (negritas, cursivas, saltos de línea) para que se vea bien
       aiText = escapeHTML(aiText);
       aiText = aiText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
       aiText = aiText.replace(/\*(.*?)\*/g, '<em>$1</em>');
       aiText = aiText.replace(/\n/g, '<br>');
 
-      // 3. Remover indicador de escribiendo de forma segura
       const typingIndicator = document.getElementById(typingID);
       if (typingIndicator) typingIndicator.remove();
 
-      // 4. Inyectar respuesta real en la interfaz
       const aiResponseHTML = `
         <div class="message ai-message" style="animation: fadeIn 0.3s ease;">
           <div class="ai-avatar">
@@ -179,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollToBottom();
 
     } catch (error) {
-      console.error("Error al conectar con el backend:", error);
+      console.error("Error detallado al conectar con el backend:", error);
       const typingIndicator = document.getElementById(typingID);
       if (typingIndicator) typingIndicator.remove();
 
@@ -191,9 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="message-content ai-content" style="border-color: #fca5a5;">
               <p style="color: #b91c1c;"><strong>Error de conexión con el backend:</strong> No se pudo contactar al servidor clínico en <code>/chat</code>.</p>
             <p style="color: var(--text-secondary); margin-top: 8px; font-size: 0.85rem;">
-              Asegúrate de:
-              <br>1. Haber configurado tu API Key de Groq en <code>backend/.env</code>.
-              <br>2. Iniciar el servidor ejecutando <code>python run.py</code> en la carpeta <code>backend</code>.
+              Verifica que el servidor backend esté corriendo en Render.
+              <br>Si el problema persiste, contacta al administrador.
             </p>
           </div>
         </div>
@@ -211,6 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function escapeHTML(str) {
+    if (!str) return '';
     return str.replace(/[&<>'"]/g,
       tag => ({
         '&': '&amp;',
