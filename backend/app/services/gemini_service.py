@@ -52,8 +52,8 @@ def load_all_knowledge_files(directory: Path) -> str:
         try:
             content = filepath.read_text(encoding="utf-8").strip()
             if content:
-                if len(content) > 4000:
-                    content = content[:4000] + "..."
+                if len(content) > 1000:
+                    content = content[:1000] + "..."
                 return f"=== Base de conocimiento ===\n{content}"
         except Exception as exc:
             logging.error("Error al leer %s: %s", filepath, exc)
@@ -64,7 +64,8 @@ def load_all_knowledge_files(directory: Path) -> str:
 def build_history_text(history: List[dict]) -> str:
     if not history:
         return "Sin historial previo."
-
+    # Solo últimos 4 mensajes
+    history = history[-4:]
     return "\n".join([f"{item['role'].capitalize()}: {item['content']}" for item in history])
 
 
