@@ -3,7 +3,8 @@ from langchain_core.language_models.llms import LLM
 from langchain_core.prompts import PromptTemplate
 from typing import Any, List, Mapping, Optional
 
-from app.config import settings
+# ✅ Cambiado: de 'app.config' a '..config' (sube un nivel de chains/ a app/)
+from ..config import settings
 
 
 class GroqLLM(LLM):

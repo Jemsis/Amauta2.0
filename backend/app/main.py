@@ -6,9 +6,12 @@ from fastapi.staticfiles import StaticFiles
 from uuid import uuid4
 from typing import List
 
-from app.config import settings
-from app.models.schemas import ChatRequest, ChatResponse, ChatHistoryItem, SessionResponse
-from app.services.gemini_service import generate_chat_response
+# ✅ Cambiado: de 'app.config' a '.config' (importación relativa)
+from .config import settings
+# ✅ Cambiado: de 'app.models.schemas' a '.models.schemas'
+from .models.schemas import ChatRequest, ChatResponse, ChatHistoryItem, SessionResponse
+# ✅ Cambiado: de 'app.services.gemini_service' a '.services.gemini_service'
+from .services.gemini_service import generate_chat_response
 
 app = FastAPI(title="AMAUTA MED Backend", version="1.0.0")
 

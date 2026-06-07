@@ -2,7 +2,8 @@ import logging
 from pathlib import Path
 from typing import List
 
-from app.chains.chat_chain import build_chat_chain
+# ✅ Cambiado: de 'app.chains.chat_chain' a '.chains.chat_chain' (pero como está en services, necesita '..' para subir a app)
+from ..chains.chat_chain import build_chat_chain
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 KNOWLEDGE_DIR = BASE_DIR / "knowledge"
@@ -95,6 +96,7 @@ def generate_chat_response(user_message: str, session_history: List[dict]) -> st
 class GeminiPromptService:
     """Clase mantenida por compatibilidad. Ahora usa Groq internamente."""
     def create_completion(self, prompt: str) -> str:
-        from app.chains.chat_chain import GroqLLM
+        # ✅ Cambiado: importación relativa también aquí
+        from ..chains.chat_chain import GroqLLM
         llm = GroqLLM()
         return llm._call(prompt)
