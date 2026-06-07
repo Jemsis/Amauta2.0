@@ -6,28 +6,21 @@ from fastapi.staticfiles import StaticFiles
 from uuid import uuid4
 from typing import List
 
-# ✅ Cambiado: de 'app.config' a '.config' (importación relativa)
 from .config import settings
-# ✅ Cambiado: de 'app.models.schemas' a '.models.schemas'
 from .models.schemas import ChatRequest, ChatResponse, ChatHistoryItem, SessionResponse
-# ✅ Cambiado: de 'app.services.gemini_service' a '.services.gemini_service'
 from .services.gemini_service import generate_chat_response
 
 app = FastAPI(title="AMAUTA MED Backend", version="1.0.0")
 
-frontend_dir = Path(__file__).resolve().parents[2] / "frontend"
-app.mount("/", StaticFiles(directory=str(frontend_dir), html=True), name="frontend")
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.allowed_origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 SESSION_STORE: dict[str, dict] = {}
-
 
 def _create_session(user_id: str) -> str:
     session_id = str(uuid4())
@@ -37,23 +30,19 @@ def _create_session(user_id: str) -> str:
     }
     return session_id
 
-
 def _get_session(session_id: str) -> dict:
     session = SESSION_STORE.get(session_id)
     if not session:
         raise HTTPException(status_code=404, detail="Sesión no encontrada")
     return session
 
-
 def _append_history(session_id: str, role: str, content: str) -> None:
     session = _get_session(session_id)
     session["history"].append({"role": role, "content": content})
 
-
 @app.get("/health")
 async def health() -> dict[str, str]:
     return {"status": "ok", "environment": settings.app_env}
-
 
 @app.get("/session", response_model=SessionResponse)
 async def create_session(user_id: str) -> SessionResponse:
@@ -63,7 +52,6 @@ async def create_session(user_id: str) -> SessionResponse:
         message="Sesión creada con éxito.",
         history=[],
     )
-
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest) -> ChatResponse:
@@ -96,3 +84,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
         reply=reply,
         history=[ChatHistoryItem(**item) for item in updated_history],
     )
+
+# IMPORTANTE: StaticFiles debe ir al FINAL
+frontend_dir = Path(__file__).resolve().parents[2] / "frontend"
+app.mount("/", StaticFiles(directory=str(frontend_dir), html=True), name="frontend")
