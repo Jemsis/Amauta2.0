@@ -40,7 +40,7 @@
     }
 
     .pricing-card {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
       border: 1px solid var(--border-color);
       border-radius: 20px;
       padding: 40px 32px;
@@ -59,7 +59,7 @@
 
     .pricing-card.popular {
       border-color: var(--primary-blue);
-      background: #f8fafc;
+      background: linear-gradient(180deg, #ffffff 0%, #eaf7fb 100%);
       transform: scale(1.05);
       box-shadow: var(--shadow-md);
     }
@@ -192,9 +192,14 @@
       display: none;
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.5);
+      background: rgba(7, 84, 99, 0.32);
       z-index: 999;
       backdrop-filter: blur(4px);
+    }
+
+    .pricing-features .check,
+    .success-modal .material-symbols-outlined {
+      color: var(--primary-blue);
     }
 
     @media (max-width: 1024px) {

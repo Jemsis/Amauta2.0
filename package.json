@@ -1,0 +1,11 @@
+{
+  "name": "amauta-med-ai-local-server",
+  "version": "1.0.0",
+  "description": "Servidor Node.js para servir la carpeta frontend de Amauta Med en un puerto local.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT"
+}

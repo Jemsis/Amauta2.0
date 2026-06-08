@@ -490,3 +490,132 @@ textarea::placeholder {
   color: var(--text-muted);
   margin-top: 12px;
 }
+
+/* ==========================================================================
+   AMAUTA MED - Tema Celeste Salud
+   Paleta base solicitada: #EAF7FB y #BFEAF2
+   ========================================================================== */
+:root {
+  --bg-app: #eaf7fb;
+  --bg-sidebar: rgba(255, 255, 255, 0.88);
+  --bg-panel: #ffffff;
+  --bg-hover: #dff3f8;
+
+  --text-primary: #0b2f3a;
+  --text-secondary: #285868;
+  --text-muted: #5f7f8a;
+
+  --primary-blue: #075463;
+  --primary-blue-hover: #043b46;
+  --light-blue-bg: #bfeaf2;
+
+  --border-color: rgba(7, 84, 99, 0.16);
+
+  --green-status: #087c89;
+  --gold-primary: #087c89;
+
+  --shadow-sm: 0 4px 16px rgba(7, 84, 99, 0.07);
+  --shadow-md: 0 14px 34px rgba(7, 84, 99, 0.13);
+}
+
+body {
+  background: linear-gradient(180deg, #eaf7fb 0%, #bfeaf2 100%);
+}
+
+.sidebar,
+.ai-content,
+.user-content,
+.input-box,
+.status-indicator {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.sidebar {
+  box-shadow: 8px 0 28px rgba(7, 84, 99, 0.06);
+}
+
+.btn-new-analysis,
+.ai-avatar {
+  background: var(--primary-blue);
+  color: #ffffff;
+}
+
+.btn-new-analysis:hover {
+  background: var(--primary-blue-hover);
+}
+
+.nav-section li a,
+.header-tabs .tab,
+.icon-btn,
+.tag,
+.user-avatar {
+  color: var(--text-secondary);
+}
+
+.nav-section li a .material-symbols-outlined,
+.icon-btn .material-symbols-outlined,
+.tag .material-symbols-outlined,
+.user-avatar .material-symbols-outlined {
+  color: currentColor;
+}
+
+.nav-section li a:hover,
+.header-tabs .tab:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.nav-section li.active a,
+.header-tabs .tab.active {
+  background: var(--light-blue-bg);
+  color: var(--primary-blue);
+}
+
+.user-avatar,
+.btn-send {
+  background: var(--light-blue-bg);
+  color: var(--primary-blue);
+}
+
+.icon-btn {
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+}
+
+.icon-btn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.status-indicator .dot {
+  background: var(--green-status);
+}
+
+.clinical-table {
+  border-color: var(--border-color);
+}
+
+.clinical-table th {
+  background: #dff3f8;
+  color: var(--text-primary);
+}
+
+.clinical-table th,
+.clinical-table td,
+.ai-footer-tags,
+.sidebar-footer {
+  border-color: var(--border-color);
+}
+
+.input-box:focus-within {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 4px rgba(191, 234, 242, 0.9);
+}
+
+.btn-send:hover {
+  background: var(--primary-blue);
+  color: #ffffff;
+}

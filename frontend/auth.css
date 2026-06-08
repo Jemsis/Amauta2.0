@@ -266,3 +266,86 @@ body {
     color: var(--gold-primary);
   }
 }
+
+/* ==========================================================================
+   AMAUTA MED - Tema Celeste Salud
+   Paleta base solicitada: #EAF7FB y #BFEAF2
+   ========================================================================== */
+:root {
+  --bg-primary: #eaf7fb;
+  --bg-card: #ffffff;
+  --text-primary: #0b2f3a;
+  --text-secondary: #285868;
+
+  --gold-primary: #087c89;
+  --gold-light: #1aa6b6;
+  --gold-dark: #075463;
+  --gold-gradient: linear-gradient(135deg, #075463, #087c89);
+
+  --blue-primary: #bfeaf2;
+  --border-subtle: rgba(7, 84, 99, 0.16);
+}
+
+body {
+  background: linear-gradient(135deg, #eaf7fb 0%, #bfeaf2 100%);
+}
+
+.auth-visual {
+  background: linear-gradient(135deg, #bfeaf2 0%, #eaf7fb 100%);
+  color: var(--text-primary);
+}
+
+.auth-visual::before {
+  background:
+    radial-gradient(circle at top right, rgba(8, 124, 137, 0.16), transparent 48%),
+    radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.7), transparent 42%);
+}
+
+.visual-content img {
+  box-shadow: 0 14px 34px rgba(7, 84, 99, 0.16);
+}
+
+.visual-content h2,
+.visual-content p,
+.visual-content h2 span {
+  color: var(--text-primary);
+}
+
+.auth-form-wrapper {
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.form-group input,
+.form-group select {
+  background: #f7fcfe;
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 4px rgba(191, 234, 242, 0.82);
+}
+
+.form-options a,
+.auth-footer a {
+  color: var(--gold-dark);
+}
+
+.btn-auth {
+  background: var(--gold-gradient);
+  box-shadow: 0 10px 26px rgba(7, 84, 99, 0.18);
+}
+
+.btn-auth:hover {
+  box-shadow: 0 14px 34px rgba(7, 84, 99, 0.24);
+}
+
+.back-home {
+  color: var(--text-primary);
+}
+
+.back-home:hover {
+  color: var(--gold-dark);
+}
